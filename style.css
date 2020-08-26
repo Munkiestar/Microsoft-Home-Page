@@ -1,0 +1,188 @@
+:root {
+  --black-clr: #000;
+  --black-light-clr: #262626;
+  --white-clr: #fff;
+  --blue-light-link: #0067b8;
+  --blue-light-link-hover: #005da6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  background-color: #fff;
+  color: var(--black-clr);
+  font-size: 15px;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--black-light-clr);
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  width: 90vw;
+  max-width: 1100px;
+  margin: auto;
+}
+
+/* NAVigation */
+.main-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 60px;
+  padding: 20px 0;
+  font-size: 13px;
+}
+
+.main-menu,
+.right-menu {
+  display: flex;
+  align-items: center;
+}
+
+.main-nav ul.main-menu {
+  flex: 1;
+  margin-left: 10px;
+}
+
+.main-nav ul li {
+  padding: 0 10px;
+}
+
+.main-nav ul li a:hover {
+  border-bottom: 2px var(--black-light-clr) solid;
+  padding-bottom: 2px;
+}
+
+.main-nav .logo {
+  width: 110px;
+}
+
+/* showcase */
+
+.showcase {
+  position: relative;
+  width: 100%;
+  height: 500px;
+  background: url('./img/showcase.jpg') center center/cover no-repeat;
+  align-items: center;
+}
+
+.showcase-bottom {
+  position: absolute;
+  left: 50%;
+  bottom: 20%;
+  transform: translate(-50%, 50%);
+  text-align: center;
+}
+
+.showcase-bottom p {
+  margin-bottom: 20px;
+}
+.showcase-bottom h1 {
+  margin-bottom: 10px;
+}
+
+.btn {
+  cursor: pointer;
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: var(--black-clr);
+  color: var(--white-clr);
+  font-weight: bold;
+  border: 0;
+  font-size: 15px;
+}
+
+.btn i {
+  margin-left: 5px;
+}
+
+.btn:hover {
+  opacity: 0.85;
+}
+
+.btn:hover i {
+  margin-left: 12px;
+  transition: all 200ms ease-in-out;
+}
+
+/* Home Cards */
+
+.home-cards {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  height: 335px;
+}
+
+.home-cards div {
+  overflow: hidden;
+}
+.home-cards img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.home-cards h3 {
+  margin-bottom: 5px;
+}
+
+.home-cards a {
+  display: inline-block;
+  padding-top: 10px;
+  color: var(--blue-light-link);
+  text-transform: capitalize;
+  font-weight: 600;
+}
+
+.home-cards a:hover {
+  border-bottom: 2px var(--blue-light-link-hover) solid;
+  background: transparent;
+  /* padding-bottom: 1px; */
+}
+
+.home-cards a:hover i {
+  margin-left: 7px;
+  transition: all 200ms ease-in-out;
+}
+
+/* <!-- Football --> */
+
+.football {
+  margin-top: 2px;
+  position: relative;
+  height: 480px;
+  width: 100%;
+  background: url('./img/football.png') center center/cover no-repeat;
+}
+
+.football .content {
+  position: absolute;
+  width: 40%;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+
+.football p {
+  margin: 10px 0 20px;
+}
+
+.football h2 {
+  font-size: 34px;
+  font-weight: 400;
+}
