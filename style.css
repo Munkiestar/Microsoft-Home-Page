@@ -178,11 +178,57 @@ ul {
   transform: translate(-50%, -50%);
 }
 
-.football p {
+.football p,
+.olympics p {
   margin: 10px 0 20px;
 }
 
-.football h2 {
-  font-size: 34px;
-  font-weight: 400;
+.football h2,
+.olympics h2 {
+  font-size: 30px;
+  font-weight: 600;
+}
+
+/* <!-- Olympics --> */
+
+.olympics {
+  position: relative;
+  height: 480px;
+  width: 100%;
+  background: url('./img/olympics.png') top left/cover no-repeat;
+}
+
+.olympics .content {
+  position: absolute;
+  width: 33%;
+  top: 25%;
+  right: -10%;
+  transform: translate(-50%, -50%);
+}
+
+/* <!-- Follow - social media --> */
+.follow {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.follow a {
+  margin-left: 10px;
+}
+
+.follow i {
+  font-size: 30px;
+  padding: 0 4px;
+  color: var(--blue-light-link);
+}
+
+.follow i.fa-facebook {
+  color: #425daa;
+}
+.follow i.fa-twitter {
+  color: #55acee;
+}
+.follow i.fa-linkedin {
+  color: #0177b5;
 }
