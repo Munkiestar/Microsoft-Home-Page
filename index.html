@@ -13,6 +13,9 @@
     <title>Microsoft - Official Home Page</title>
   </head>
   <body>
+    <div class="menu-btn">
+      <i class="fas fa-bars fa-2x"></i>
+    </div>
     <div class="container">
       <!-- Nav -->
       <nav class="main-nav">
@@ -30,13 +33,13 @@
 
         <ul class="right-menu">
           <li>
-            <a href="#">Search<i class="fas fa-search fa-2x"></i></a>
+            <a href="#"><i class="fas fa-search fa-2x"></i></a>
           </li>
           <li>
-            <a href="#">Cart<i class="fas fa-shopping-cart fa-2x"></i></a>
+            <a href="#"><i class="fas fa-shopping-cart fa-2x"></i></a>
           </li>
           <li>
-            <a href="#">Sign in<i class="far fa-user-circle fa-2x"></i></a>
+            <a href="#"><i class="far fa-user-circle fa-2x"></i></a>
           </li>
         </ul>
       </nav>
@@ -246,5 +249,14 @@
         </ul>
       </div>
     </footer>
+
+    <script>
+      const hamburgerMenu = document.querySelector('.menu-btn');
+      const showList = document.querySelector('.main-nav ul');
+
+      hamburgerMenu.addEventListener('click', () => {
+        showList.classList.toggle('show');
+      });
+    </script>
   </body>
 </html>

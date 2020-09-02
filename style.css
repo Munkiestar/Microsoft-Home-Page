@@ -75,6 +75,16 @@ ul {
   width: 110px;
 }
 
+/* hamburger menu */
+.menu-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 40px;
+  z-index: 10;
+  display: none;
+}
+
 /* showcase */
 
 .showcase {
@@ -127,16 +137,17 @@ ul {
 /* Home Cards */
 
 .home-cards {
+  width: 100%;
   margin-top: 20px;
   margin-bottom: 50px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-gap: 20px;
-  height: 335px;
+  /* height: 335px; */
 }
 
 .home-cards div {
-  overflow: hidden;
+  margin-bottom: 15px;
 }
 .home-cards img {
   width: 100%;
@@ -147,7 +158,7 @@ ul {
   margin-bottom: 5px;
 }
 
-.home-cards a {
+.home-cards div a {
   display: inline-block;
   padding-top: 10px;
   color: var(--blue-light-link);
@@ -312,4 +323,115 @@ ul {
 
 .footer-inner li a:hover {
   border-bottom: 1px solid #000;
+}
+
+/* Media Queries */
+
+/* screen size of 700px and smaller */
+
+@media (max-width: 800px) {
+  .menu-btn {
+    display: block;
+  }
+
+  .main-nav ul.main-menu {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f2f2f2;
+    width: 50%;
+    height: 100%;
+    z-index: 100;
+    transform: translateX(-500px);
+    border-right: 1px solid #ccc;
+    opacity: 0.9;
+    padding: 30px;
+    transition: transform 1s ease;
+  }
+
+  .main-nav ul.main-menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    font-size: 14px;
+  }
+
+  .main-nav ul.main-menu.show {
+    transform: translateX(-10px);
+  }
+
+  .main-nav ul.right-menu {
+    margin-right: 50px;
+  }
+
+  .home-cards {
+    grid-template-columns: repeat(2, 1fr);
+    height: 100%;
+  }
+  .home-cards div {
+    height: auto;
+    margin: 10px 0;
+  }
+  .football p {
+    margin: 10px -10px 20px;
+  }
+
+  .olympics .content {
+    background: #0006;
+    margin-top: 120px;
+    color: #fff;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 25%;
+    right: -50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+
+  .olympics .content h2 {
+    margin-top: 30%;
+    top: 45%;
+    right: -50%;
+    transform: translate(0%, -50%);
+    text-align: center;
+  }
+
+  .olympics .content p {
+    width: 70%;
+    margin: 0 auto 20px;
+  }
+
+  .links .links-inner {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .links .links-inner ul {
+    margin-bottom: 20px;
+  }
+
+  .footer .footer-inner div {
+    width: 60%;
+  }
+}
+
+@media (max-width: 500px) {
+  .home-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .links {
+    padding: 10px 0 0;
+  }
+  .links .links-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .footer .footer-inner {
+    width: 100%;
+    display: block;
+  }
+
+  .footer .footer-inner div {
+    margin-bottom: 20px;
+  }
 }
